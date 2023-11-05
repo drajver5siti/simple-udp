@@ -30,10 +30,9 @@ public class UDPServer extends Thread{
 
             String receivedMessage = new String(newPacket.getData(), 0, newPacket.getLength());
             System.out.printf(
-                    "Message from %s(%s): %s\n",
-                    newPacket.getAddress().getHostName(),
+                    "Message from %s: %s\n",
                     newPacket.getAddress().getHostAddress(),
-                    receivedMessage
+                    receivedMessage.trim()
             );
         }
     }
